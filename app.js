@@ -93,13 +93,13 @@ inquirer.prompt([
           {
             type: 'input',
             name: 'githubEngineer',
-            message: 'What is the engineers Github?',
+            message: 'What is the engineers Github username?',
           },
 
         ])
           .then((answers) => {
             const engineer = new Engineer(
-              answers.nameEngineer, answers.githubEngineer, answers.idEngineer, answers.emailEngineer
+              answers.nameEngineer, answers.idEngineer, answers.emailEngineer, answers.githubEngineer
             );
             teamArray.push(engineer)
             console.log("\033[;32mEngineer Added!\033[0m\n")
