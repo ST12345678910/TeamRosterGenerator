@@ -2,6 +2,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
+const open = require('open');
 const path = require("path");
 const fs = require("fs");
 
@@ -14,7 +15,7 @@ const teamArray = [];
 function createTeam() {
 
 function teamManager() {
-  console.log("*Create Your Team*")
+  console.log("\033[4;33m*Create Your Team*\033[0m\n")
 inquirer.prompt([
     {
       type: 'input',
@@ -72,7 +73,7 @@ inquirer.prompt([
       }
 
       function engineerAdd() {
-        console.log("*Add an engineer*")
+        console.log("\033[4;33m*Add an engineer*\033[0m\n")
         inquirer.prompt([
           {
             type: 'input',
@@ -101,13 +102,13 @@ inquirer.prompt([
               answers.nameEngineer, answers.githubEngineer, answers.idEngineer, answers.emailEngineer
             );
             teamArray.push(engineer)
-            console.log("Engineer Added!")
+            console.log("\033[;32mEngineer Added!\033[0m\n")
             addTeam();
           })
       }
 
       function internAdd() {
-        console.log("*Add an intern*")
+        console.log("\033[4;33m*Add an intern*\033[0m\n")
         inquirer.prompt([
           {
             type: 'input',
@@ -136,16 +137,17 @@ inquirer.prompt([
               answers.nameIntern, answers.idIntern, answers.emailIntern, answers.schoolIntern
             );
             teamArray.push(intern)
-            console.log("Intern Added!")
+            console.log("\033[;32mIntern Added!\033[0m\n")
             addTeam();
           })
       }
 
 
       function generateSummary() {
-        console.log("summary generated")
-        console.log(teamArray)
+        console.log("\033[;32mTeam Summary Generated\033[0m\n")
+        console.log("\033[1;31mOpening Now...\033[0m\n")
         fs.writeFileSync(outputPath, render(teamArray), 'utf-8');
+        open('./output/team.html')
       }
     });
 }

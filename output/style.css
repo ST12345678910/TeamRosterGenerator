@@ -1,0 +1,32 @@
+.jumbotron {
+  background-color: #c0e0de;
+}
+
+.text-center {
+  zoom: 150%;
+}
+
+body {
+  background-color: #c0e0de;
+}
+
+.card {
+  background-color: #4F7CAC;
+  color: black;
+}
+
+.card-title {
+  color: rgb(255, 254, 254);
+}
+
+.card:hover {
+  background-color: #162521;
+  zoom: 125%;
+  border: solid darkgoldenrod 5px;
+}
+
+.team-area {
+  max-width: auto;
+  margin: 1em auto;
+  flex-wrap: wrap;
+}
