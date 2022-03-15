@@ -12,6 +12,7 @@
 - [Questions](#questions)
 ## Installation
 Clone the repository to your device, then run the following command: <code>npm i</code>
+![Alt Text](./)
 ## Usage
 To begin, run the command <code>node app.js</code> then you will be prompted to enter your team's info. Once the user has selects the option to stop adding members and generate, then their custom team roster will be automatically opened in their default browser.
 ## Contributing
